@@ -1,0 +1,23 @@
+menu "Configuracion del monitoreo HTTP"
+
+config CLOUD_UPDATE_URL
+    string "URL de actualizacion HTTP"
+    default "https://api.thingspeak.com/update"
+    help
+        Endpoint que recibe los datos mediante una solicitud POST.
+
+config CLOUD_WRITE_API_KEY
+    string "Write API Key de ThingSpeak"
+    default ""
+    help
+        Clave de escritura del canal. No se almacena en el repositorio.
+
+config CLOUD_SEND_INTERVAL_SECONDS
+    int "Intervalo entre envios en segundos"
+    range 15 3600
+    default 20
+    help
+        ThingSpeak requiere al menos 15 segundos entre actualizaciones
+        en canales gratuitos.
+
+endmenu
