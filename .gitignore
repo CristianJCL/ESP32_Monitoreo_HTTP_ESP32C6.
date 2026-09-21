@@ -1,0 +1,8 @@
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+.vscode/
+host_tests/test_monitor_logic
+.idea/
+*.code-workspace
